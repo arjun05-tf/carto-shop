@@ -1,218 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>🚀 Product Management System</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #f6f8fa 0%, #e8f0fe 100%);
-            margin: 0;
-            padding: 20px;
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 30px;
-            color: #34495e;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-        }
-        .section {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.15);
-            padding: 25px 30px;
-            margin: 25px auto;
-            max-width: 900px;
-            transition: transform 0.3s ease;
-            cursor: default;
-        }
-        .section:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 18px 36px rgba(41, 128, 185, 0.25);
-        }
-        h2 {
-            border-bottom: 3px solid #2980b9;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            font-size: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #2471a3;
-        }
-        h3 {
-            font-weight: 600;
-            margin-top: 20px;
-            margin-bottom: 12px;
-            color: #34495e;
-        }
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #3d566e;
-        }
-        ul.acceptance-criteria {
-            list-style-type: none;
-            padding-left: 0;
-            margin-left: 0;
-        }
-        ul.acceptance-criteria li {
-            background: #d6eaf8;
-            margin-bottom: 12px;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 1rem;
-            color: #1b4f72;
-            position: relative;
-            padding-left: 40px;
-            transition: background-color 0.25s ease;
-        }
-        ul.acceptance-criteria li:hover {
-            background-color: #85c1e9;
-        }
-        ul.acceptance-criteria li::before {
-            content: "✅";
-            position: absolute;
-            left: 15px;
-            top: 12px;
-            font-size: 1.3rem;
-        }
-        .priority {
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: #c0392b;
-            margin: 15px 0 20px 0;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .optional {
-            font-style: italic;
-            background-color: #f0f3f4;
-            color: #909497;
-            border: 1px dashed #bdc3c7;
-            padding: 8px 15px;
-            border-radius: 8px;
-            position: relative;
-            padding-left: 40px;
-        }
-        .optional::before {
-            content: "🔷";
-            position: absolute;
-            left: 15px;
-            top: 8px;
-            font-size: 1.2rem;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            .section {
-                padding: 20px 15px;
-                margin: 15px auto;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
-            p, ul.acceptance-criteria li {
-                font-size: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
+<h1>Product Features and Acceptance Criteria</h1>
 
-<h1>🚀 Product Management System</h1>
-
-<div class="section" id="browse-products">
-    <h2>🛍️ 1. Browse Products</h2>
-    <p><strong>Description:</strong> Users can browse and filter products by category, brand, and price.</p>
-    <p class="priority">🔥 Priority: High</p>
+<!-- 1. Product Search and Filter -->
+<div class="section" id="product-search">
+    <h2>🔍 1. Product Search and Filter</h2>
+    <p><strong>Description:</strong> Users can search and filter products based on different criteria.</p>
     <h3>Acceptance Criteria:</h3>
     <ul class="acceptance-criteria">
-        <li>Category and brand filtering is available.</li>
-        <li>Price range filter works correctly.</li>
-        <li>Products are shown with name, image, and price.</li>
-        <li>Users can view product details.</li>
+        <li>Search bar should allow keyword input for product search.</li>
+        <li>Filters should include categories, price range, ratings, etc.</li>
+        <li>Filters should be applied dynamically with real-time results.</li>
     </ul>
     <ul class="acceptance-criteria optional">
-        <li>Sort by price, popularity, or newest.</li>
-        <li>Filter results count shown.</li>
+        <li>Search results should show product images.</li>
+        <li>Allow sorting by price, ratings, or relevance.</li>
     </ul>
 </div>
 
-<div class="section" id="add-to-cart">
-    <h2>🛒 2. Add Items to Cart</h2>
-    <p><strong>Description:</strong> Users can add items to a shopping cart with quantity selection.</p>
+<!-- 2. Product Details Page -->
+<div class="section" id="product-details">
+    <h2>📄 2. Product Details Page</h2>
+    <p><strong>Description:</strong> A detailed page for each product, including images, descriptions, and price.</p>
     <h3>Acceptance Criteria:</h3>
     <ul class="acceptance-criteria">
-        <li>Add to cart from product or detail page.</li>
-        <li>Quantity can be specified.</li>
-        <li>Cart updates with item and quantity.</li>
-        <li>Confirmation message shown.</li>
-        <li>Cart summary is visible.</li>
+        <li>Each product has a title, image, description, price, and availability status.</li>
+        <li>Product details should be displayed in a clean, organized layout.</li>
+        <li>Users can select product quantity and add it to the cart.</li>
+    </ul>
+    <ul class="acceptance-criteria optional">
+        <li>Product recommendations based on current product viewed.</li>
+        <li>Allow users to view customer reviews and ratings.</li>
     </ul>
 </div>
 
+<!-- 3. Shopping Cart -->
+<div class="section" id="shopping-cart">
+    <h2>🛒 3. Shopping Cart</h2>
+    <p><strong>Description:</strong> Users can view and manage their shopping cart.</p>
+    <h3>Acceptance Criteria:</h3>
+    <ul class="acceptance-criteria">
+        <li>The cart should show a list of selected products, their quantities, and total price.</li>
+        <li>Users can change product quantities or remove items from the cart.</li>
+        <li>Users can proceed to checkout from the cart page.</li>
+    </ul>
+    <ul class="acceptance-criteria optional">
+        <li>Users can save items for later.</li>
+        <li>Show estimated shipping cost based on the cart contents.</li>
+    </ul>
+</div>
+
+<!-- 4. Checkout Process -->
 <div class="section" id="checkout">
-    <h2>💳 3. Checkout Process</h2>
-    <p><strong>Description:</strong> Users can complete purchases by entering shipping info and selecting payment.</p>
+    <h2>💳 4. Checkout Process</h2>
+    <p><strong>Description:</strong> The user can complete their purchase by providing shipping information and payment details.</p>
     <h3>Acceptance Criteria:</h3>
     <ul class="acceptance-criteria">
-        <li>Accessible from cart.</li>
-        <li>Displays order details and total.</li>
-        <li>Shipping address can be entered or selected.</li>
-        <li>Supports Cash on Delivery and Online Payments.</li>
-        <li>Review step before order confirmation.</li>
-        <li>Confirmation message shown after order.</li>
-        <li>Unique order ID generated.</li>
-    </ul>
-</div>
-
-<div class="section" id="cod-payments">
-    <h2>💵 4. Cash on Delivery Payments</h2>
-    <p><strong>Description:</strong> COD is available as a payment method with order tracking.</p>
-    <h3>Acceptance Criteria:</h3>
-    <ul class="acceptance-criteria">
-        <li>COD selectable at checkout.</li>
-        <li>User informed about payment at delivery.</li>
-        <li>Order confirmation includes payment method.</li>
-        <li>System records COD status.</li>
-    </ul>
-</div>
-
-<div class="section" id="online-payments">
-    <h2>💳 5. Online Payments</h2>
-    <p><strong>Description:</strong> Supports secure online payment via various gateways.</p>
-    <h3>Acceptance Criteria:</h3>
-    <ul class="acceptance-criteria">
-        <li>Online payment option available.</li>
-        <li>Redirects to secure gateway.</li>
-        <li>Transmits order details securely.</li>
-        <li>Successful payments confirm order.</li>
-        <li>Failed payments prompt retry or change option.</li>
-        <li>Payment status recorded in system.</li>
+        <li>Users can provide their shipping address and payment details.</li>
+        <li>Order summary should be displayed with itemized prices, taxes, and shipping fees.</li>
+        <li>Users can select their payment method (e.g., credit card, PayPal).</li>
     </ul>
     <ul class="acceptance-criteria optional">
-        <li>Support for UPI, cards, and net banking.</li>
+        <li>Option to save shipping information for future purchases.</li>
+        <li>Allow users to apply discount codes or promotional offers.</li>
     </ul>
 </div>
 
-<div class="section" id="order-history">
-    <h2>📜 6. View Order History</h2>
-    <p><strong>Description:</strong> Logged-in users can view and review their past orders.</p>
+<!-- 5. User Profile and Account Management -->
+<div class="section" id="user-profile">
+    <h2>👤 5. User Profile and Account Management</h2>
+    <p><strong>Description:</strong> Users can manage their account, including profile settings and order history.</p>
     <h3>Acceptance Criteria:</h3>
     <ul class="acceptance-criteria">
-        <li>Order history page available for logged-in users.</li>
-        <li>Shows past orders with IDs, dates, summaries, and status.</li>
+        <li>Users can create an account or log in using email or social media.</li>
+        <li>Users can update their personal details, such as email, address, and password.</li>
+        <li>Users can view their order history and status.</li>
     </ul>
     <ul class="acceptance-criteria optional">
-        <li>Click to view detailed order info including items, shipping, and payment.</li>
+        <li>Users can upload a profile picture.</li>
+        <li>Provide an option to reset the password.</li>
+    </ul>
+</div>
+
+<!-- 6. Product History -->
+<div class="section" id="product-history">
+    <h2>🕒 6. Product History</h2>
+    <p><strong>Description:</strong> Users can view a history of their previously viewed or purchased products.</p>
+    <h3>Acceptance Criteria:</h3>
+    <ul class="acceptance-criteria">
+        <li>Users can view a list of recently viewed products.</li>
+        <li>Users can easily add any product from the history back to their cart.</li>
+    </ul>
+    <ul class="acceptance-criteria optional">
+        <li>Option to clear browsing or purchase history.</li>
+    </ul>
+</div>
+
+<!-- 7. Order Tracking -->
+<div class="section" id="order-tracking">
+    <h2>📦 7. Order Tracking</h2>
+    <p><strong>Description:</strong> Users can track the status of their orders in real-time.</p>
+    <h3>Acceptance Criteria:</h3>
+    <ul class="acceptance-criteria">
+        <li>Tracking page shows order progress (e.g., confirmed, packed, shipped, delivered).</li>
+        <li>Each order has a unique tracking number or status flow.</li>
+        <li>Tracking page is mobile responsive.</li>
+    </ul>
+    <ul class="acceptance-criteria optional">
+        <li>Show estimated delivery date.</li>
+        <li>Send email/SMS updates on status change.</li>
+    </ul>
+</div>
+
+<!-- 8. Admin Panel for Product Management -->
+<div class="section" id="admin-panel">
+    <h2>🛠️ 8. Admin Panel for Product Management</h2>
+    <p><strong>Description:</strong> Admins can manage products, including adding, editing, or deleting them.</p>
+    <h3>Acceptance Criteria:</h3>
+    <ul class="acceptance-criteria">
+        <li>Admins can log in securely.</li>
+        <li>Admin dashboard shows list of all products.</li>
+        <li>Admins can add a new product with details.</li>
+        <li>Admins can update existing product info.</li>
+        <li>Admins can delete a product.</li>
+        <li>Validation errors are shown for bad inputs.</li>
+    </ul>
+    <ul class="acceptance-criteria optional">
+        <li>Admins can manage categories and stock levels.</li>
+        <li>Activity log for admin actions.</li>
     </ul>
 </div>
 
