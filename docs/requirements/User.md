@@ -1,105 +1,142 @@
+<h1>🛒 E-Commerce Feature Requirements</h1>
 
-##1. Browse Products##
+<hr style="border: 1px dashed #ccc;">
 
-**Description:** The system shall allow users to browse available products. Users should be able to filter products by various criteria such as category, brand, price range, and potentially other relevant attributes (e.g., color, size).
+<h2>1. 🛍️ Browse Products</h2>
 
-**Acceptance Criteria:**
-* Users can navigate through product categories.
-* Users can filter products by brand.
-* Users can filter products by a specified price range (minimum and maximum).
-* The system displays the product name, image, and price for each displayed product.
-* The system should provide an option to view more details about a specific product.
-* (Optional) Users can sort products by different criteria (e.g., price: low to high, price: high to low, newest arrivals).
-* (Optional) The number of products matching the applied filters is displayed.
+<p><strong>📝 Description:</strong><br>
+The system shall allow users to browse available products. Users should be able to filter products by various criteria such as category, brand, price range, and potentially other relevant attributes (e.g., color, size).</p>
 
-**Priority:** High
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>🗂️ Users can navigate through product categories.</li>
+  <li>🏷️ Users can filter products by brand.</li>
+  <li>💰 Users can filter products by a specified price range (minimum and maximum).</li>
+  <li>🖼️ Product name, image, and price are displayed.</li>
+  <li>🔍 Option to view more details about a specific product.</li>
+  <li>🧮 (Optional) Sort products by price or newest arrivals.</li>
+  <li>🔢 (Optional) Show number of matching products.</li>
+</ul>
 
-**====================**
-***2. Add Items to Cart***
+<p>🎯 <strong>Priority:</strong> High</p>
 
-**Description:** The system shall allow users to add selected products to a virtual shopping cart. Users should be able to specify the quantity of each item they wish to add.
+<hr style="border: 1px dashed #ccc;">
 
-**Acceptance Criteria:**
-* Users can add products to their shopping cart from the product listing or product detail page.
-* When adding an item, users can specify the desired quantity.
-* The system updates the shopping cart with the added item and the specified quantity.
-* The system displays a confirmation message when an item is added to the cart.
-* The shopping cart displays the list of added items, their quantities, and the subtotal.
-**---------------------**
-**3. Checkout Process**
+<h2>2. 🛒 Add Items to Cart</h2>
 
-**Description:** The system shall allow users to proceed to checkout from their shopping cart to purchase the items. The checkout process should involve reviewing the order, providing shipping information, selecting a payment method, and confirming the order.
+<p><strong>📝 Description:</strong><br>
+Users can add selected products to a virtual cart, specifying quantity.</p>
 
-**Acceptance Criteria:**
-* Users can access the checkout page from the shopping cart.
-* The checkout page displays the items in the cart, their quantities, and the total amount.
-* Users can provide or select a shipping address.
-* Users can select an available payment method (Cash on Delivery / Online).
-* Users can review their order details (items, quantity, shipping address, total amount) before confirming.
-* Upon successful order placement, the user receives an order confirmation (e.g., on-screen and/or via email).
-* The system generates a unique order ID for each successful order.
-**====================**
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>➕ Add products from listing or detail page.</li>
+  <li>🔢 Choose quantity when adding.</li>
+  <li>🧺 Cart updates with item and quantity.</li>
+  <li>✅ Confirmation message is shown.</li>
+  <li>📋 Cart shows items, quantity, and subtotal.</li>
+</ul>
 
+<hr style="border: 1px dashed #ccc;">
 
-**====================**
-**4. Cash on Delivery Payments**
+<h2>3. 💳 Checkout Process</h2>
 
-**Description:** The system shall allow users to select "Cash on Delivery" as a payment method.
+<p><strong>📝 Description:</strong><br>
+Users can proceed to checkout to complete their purchase.</p>
 
-**Acceptance Criteria:**
-* "Cash on Delivery" is presented as a selectable payment option during checkout.
-* If "Cash on Delivery" is selected, the user is informed that they will pay the total amount upon receiving the order.
-* The order confirmation includes the selected payment method.
-* The system records the payment method as "Cash on Delivery" for the order.
-**---------------------**
-**5. Online Payments**
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>🧾 Access checkout from cart.</li>
+  <li>🛍️ View items, quantity, and total on checkout page.</li>
+  <li>🏠 Enter or select shipping address.</li>
+  <li>💸 Choose a payment method (Cash on Delivery / Online).</li>
+  <li>🧾 Review order before confirming.</li>
+  <li>📧 Order confirmation on-screen or via email.</li>
+  <li>🆔 Unique order ID generated.</li>
+</ul>
 
-**Description:** The system shall integrate with one or more secure online payment gateways to allow users to make payments using various online methods (e.g., credit/debit cards, net banking, UPI).
+<hr style="border: 1px dashed #ccc;">
 
-**Acceptance Criteria:**
-* "Online Payment" is presented as a selectable payment option during checkout.
-* Upon selecting "Online Payment," the user is redirected to a secure payment gateway interface.
-* The system securely transmits the order details to the payment gateway.
-* Upon successful payment authorization from the gateway, the order is confirmed.
-* If the online payment fails, the user is informed, and options to retry or choose another payment method are provided.
-* The system records the successful online payment status for the order.
-* (Specify supported online payment methods if known: e.g., Credit Card, Debit Card, UPI).
-**====================**
+<h2>4. 💵 Cash on Delivery Payments</h2>
 
-**6. View Order History**
+<p><strong>📝 Description:</strong><br>
+Cash on Delivery (COD) as a payment option.</p>
 
-**Description:** The system shall allow logged-in users to view a history of their past orders. This should include details such as order ID, date placed, items ordered, total amount, and order status.
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>💵 COD shown as a payment option.</li>
+  <li>📦 Info that payment is made on delivery.</li>
+  <li>📧 Confirmation includes payment method.</li>
+  <li>📄 COD is recorded in the order.</li>
+</ul>
 
-**Acceptance Criteria:**
-* Logged-in users can access a section displaying their order history.
-* The order history displays a list of past orders.
-* For each order, the following information is displayed: order ID, date of order, a summary of the items ordered (e.g., number of items or a brief list), and the total amount paid.
-* The current status of each order (e.g., Pending, Processing, Shipped, Delivered) is clearly displayed.
-* (Optional) Users can click on an order to view more detailed information about it (e.g., full list of items, shipping address, payment details).
+<hr style="border: 1px dashed #ccc;">
 
-**7. Track Orders**
+<h2>5. 💳 Online Payments</h2>
 
-**Description:** The system shall allow users to track the current status and location (if available) of their active orders.
+<p><strong>📝 Description:</strong><br>
+Online payment integration with secure gateways.</p>
 
-**Acceptance Criteria:**
-* Logged-in users can access a section to track their orders.
-* Users can view the current status of their orders (e.g., Processing, Shipped, Out for Delivery).
-* (If integrated with a shipping provider) Users can view the current location of their shipped orders.
-* The system provides an estimated delivery date (if available).
-* Users can easily find the tracking information associated with each order (e.g., tracking number).
-* (Optional) The system sends notifications to users about updates to their order status.
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>💳 Online payment option available.</li>
+  <li>🔗 Redirects to secure payment interface.</li>
+  <li>🔒 Secure transmission of order details.</li>
+  <li>✅ Confirmation on success, retry on failure.</li>
+  <li>💰 Status of payment recorded on order.</li>
+  <li>📱 Supports: Credit Card, Debit Card, UPI (if specified).</li>
+</ul>
 
-**8. Manage Profile Information**
+<hr style="border: 1px dashed #ccc;">
 
-**Description:** The system shall allow logged-in users to manage their profile information, including their shipping addresses and contact details (e.g., phone number).
+<h2>6. 📜 View Order History</h2>
 
-**Acceptance Criteria:**
-* Logged-in users can access a section to manage their profile.
-* Users can view their saved shipping addresses.
-* Users can add new shipping addresses, including fields for name, street address, city, state, zip code, and country.
-* Users can edit their existing shipping addresses.
-* Users can delete their saved shipping addresses.
-* Users can view and update their contact information (e.g., phone number).
-* The system validates the format of the contact information (e.g., phone number format).
-* Users can set a default shipping address.
+<p><strong>📝 Description:</strong><br>
+Logged-in users can view their order history.</p>
 
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>👤 Users can access order history section.</li>
+  <li>🗃️ Display list of past orders.</li>
+  <li>🆔 Show order ID, date, item summary, and total amount.</li>
+  <li>📦 Show current status of each order.</li>
+  <li>🔎 (Optional) Click to view full details.</li>
+</ul>
+
+<hr style="border: 1px dashed #ccc;">
+
+<h2>7. 🚚 Track Orders</h2>
+
+<p><strong>📝 Description:</strong><br>
+Track order status and location if applicable.</p>
+
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>📦 Users can access order tracking section.</li>
+  <li>📍 View status (e.g., Processing, Shipped, Out for Delivery).</li>
+  <li>🗺️ (Optional) Live location tracking if integrated.</li>
+  <li>⏳ Estimated delivery date shown (if available).</li>
+  <li>🔎 Tracking number is easy to find.</li>
+  <li>📬 (Optional) Notifications on order updates.</li>
+</ul>
+
+<hr style="border: 1px dashed #ccc;">
+
+<h2>8. 👤 Manage Profile Information</h2>
+
+<p><strong>📝 Description:</strong><br>
+Allow users to manage personal and shipping info.</p>
+
+<p><strong>✅ Acceptance Criteria:</strong></p>
+<ul>
+  <li>🔧 Users can access their profile settings.</li>
+  <li>🏠 View and manage saved addresses.</li>
+  <li>➕ Add new addresses with required fields.</li>
+  <li>✏️ Edit existing addresses.</li>
+  <li>🗑️ Delete saved addresses.</li>
+  <li>📞 Update phone number/contact info.</li>
+  <li>✅ Validate contact info format.</li>
+  <li>⭐ Set default shipping address.</li>
+</ul>
+
+<hr style="border: 2px solid #333; border-style: dashed none none;">
+<p align="center">✨ End of Feature List ✨</p>
