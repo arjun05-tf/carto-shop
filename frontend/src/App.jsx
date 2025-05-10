@@ -1,11 +1,15 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
 function App() {
 
   return (
-    <>
-      The Landing Page
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={ <HomePage />  } />
+      </Routes>
+    </Router>
   )
 }
 
